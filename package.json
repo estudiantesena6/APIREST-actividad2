@@ -1,0 +1,28 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "mi primera APIREST",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estudiantesena6/Apiresd.git"
+  },
+  "author": "jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estudiantesena6/Apiresd/issues"
+  },
+  "homepage": "https://github.com/estudiantesena6/Apiresd#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
