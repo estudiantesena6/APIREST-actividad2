@@ -11,7 +11,7 @@ const PostSchema = mongoose.Schema({
     },
     date:{
         type:Date,
-        required:Date.now
+        default:Date.now
     }
 }); 
 module.exports=mongoose.model('BaseDatos', PostSchema); // exporto el modelo
