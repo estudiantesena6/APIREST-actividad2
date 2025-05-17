@@ -3,14 +3,14 @@ const router = express.Router(); // permite crear rutas para la base de datos
 const BaseDatos = require('../models/BaseDatos'); // importo el modelo
 
 // llamar todas los post de la base de datos
-router.get('/', async (req, res) => { // '/' es la ruta raíz que trae todos los documentos de la base de datos
+router.get('/', async (req, res) => { 
     try {
-        const posts = await BaseDatos.find(); // find() trae todos los documentos
-        res.json(posts); // envía la respuesta en formato JSON
+        const posts = await BaseDatos.find(); 
+        res.json(posts); 
     } catch (err) {
         res.status(500).json({ message: err.message }); // atrapa y envía errores al cliente
     }
-}); // atrapa errores
+}); //Busca y devuelve todos los datos
 
 router.get('/:Datosid', async (req, res) => {
     try {
@@ -19,7 +19,7 @@ router.get('/:Datosid', async (req, res) => {
     } catch (err) {
         res.json({ message: 'error de consulta de base de datos' });
     }
-}); // solicutud del usuario
+}); //Busca un solo dato por su ID
 
 // Crear un nuevo post
 router.post('/', async (req, res) => {
@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
     });
 
     try {
-        const savedDatos = await post.save(); // saved guarda
+        const savedDatos = await post.save(); 
         res.status(201).json(savedDatos);
     } catch (err) {
         res.json({ message:'error al guardar los datos' });
@@ -42,7 +42,7 @@ router.patch('/:actualizarId', async (req, res) => {
         const updatedPost = await BaseDatos.updateOne(
             { _id: req.params.actualizarId },
             { $set: { nombre: req.body.nombre, apellido: req.body.apellido } }
-        ); //$set es un operador de MongoDB que dice: "actualiza estos campos con estos valores".
+        ); 
 
 
 
@@ -69,4 +69,4 @@ router.delete('/:DataId', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router; // exporto el router

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const PostSchema = mongoose.Schema({
-
+// Definir el esquema
     nombre:{
         type:String,
         required:true

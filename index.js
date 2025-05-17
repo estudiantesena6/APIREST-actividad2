@@ -1,9 +1,9 @@
-const express = require('express'); // Crea rutas para manejar solicitudes y respuestas en HTTP.
-const app = express(); //  decrala la constante para su conexión
-const mongoose = require('mongoose'); // Base de datos no relacional que se conecta al servidor vía URL.
-const cors = require('cors'); // Permite conexiones seguras entre diferentes dominios.
-const morgan = require('morgan'); // // Muestra en consola las peticiones para depurar en tiempo real.
-const bodyparser = require('body-parser'); // Permite leer datos del cliente (body) y convertirlos en formato JSON.
+const express = require('express'); 
+const app = express(); 
+const mongoose = require('mongoose'); 
+const cors = require('cors'); 
+const morgan = require('morgan'); 
+const bodyparser = require('body-parser'); 
 app.use(bodyparser.json()); // herramintas que se va utilizar
 
 
